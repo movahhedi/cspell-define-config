@@ -1,0 +1,71 @@
+{
+	"name": "cspell-define-config",
+	"version": "0.1.1",
+	"author": "movahhedi",
+	"contributors": [
+		{
+			"name": "Shahab Movahhedi",
+			"email": "dev@shmovahhedi.com",
+			"url": "https://shmovahhedi.com"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/movahhedi/cspell-define-config.git"
+	},
+	"homepage": "https://github.com/movahhedi/cspell-define-config#readme",
+	"bugs": {
+		"url": "https://github.com/movahhedi/cspell-define-config/issues"
+	},
+	"license": "MIT",
+	"packageManager": "yarn@4.1.1",
+	"type": "module",
+	"exports": {
+		"default": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.module.js"
+		},
+		"import": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		},
+		"require": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.cjs"
+		},
+		"types": "./dist/index.d.ts"
+	},
+	"source": "src/index.ts",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.module.js",
+	"unpkg": "./dist/index.umd.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"config",
+		"configuration",
+		"defineConfig",
+		"define-config",
+		"cspell-config",
+		"cspell",
+		"cspellconfig",
+		"typed",
+		"typescript"
+	],
+	"scripts": {
+		"build": "microbundle",
+		"dev": "microbundle watch",
+		"prepublishOnly": "yarn build"
+	},
+	"dependencies": {
+		"@cspell/cspell-types": "^8.6.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20.11.25",
+		"microbundle": "^0.15.1",
+		"tsup": "^8.0.2",
+		"typescript": "^5.4.2"
+	}
+}
